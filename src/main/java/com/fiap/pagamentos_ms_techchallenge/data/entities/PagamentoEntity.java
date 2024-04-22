@@ -19,7 +19,7 @@ public class PagamentoEntity {
     private UUID id;
 
     @Column(name = "pedido_id")
-    private int pedidoId;
+    private Long pedidoId;
 
     @Column(name = "total")
     private Float total;

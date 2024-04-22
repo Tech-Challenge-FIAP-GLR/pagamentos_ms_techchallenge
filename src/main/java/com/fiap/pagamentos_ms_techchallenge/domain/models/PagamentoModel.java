@@ -13,14 +13,14 @@ import java.util.UUID;
 public class PagamentoModel {
 
     private UUID id;
-    private int pedidoId;
+    private Long pedidoId;
     private Float total;
     private LocalDateTime dataPagamentoGerado;
     private LocalDateTime dataPagamentoConfirmado;
     private String statusPagamento;
     private String qrCode;
 
-    public PagamentoModel(UUID id, int pedidoId, Float total, LocalDateTime dataPagamentoGerado, LocalDateTime dataPagamentoConfirmado, String statusPagamento, String qrCode) {
+    public PagamentoModel(UUID id, Long pedidoId, Float total, LocalDateTime dataPagamentoGerado, LocalDateTime dataPagamentoConfirmado, String statusPagamento, String qrCode) {
         this.id = id;
         this.pedidoId = pedidoId;
         this.total = total == null ? (float) 0.0 : total;
@@ -28,6 +28,11 @@ public class PagamentoModel {
         this.dataPagamentoConfirmado = dataPagamentoConfirmado;
         this.statusPagamento = statusPagamento;
         this.qrCode = qrCode;
+    }
+
+    public PagamentoModel(Long pedidoId, Float total) {
+        this.pedidoId = pedidoId;
+        this.total = total;
     }
 
     public static PagamentoModel fromEntity(PagamentoEntity pedidoEntity) {
