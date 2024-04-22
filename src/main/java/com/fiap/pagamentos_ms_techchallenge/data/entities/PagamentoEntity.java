@@ -31,7 +31,7 @@ public class PagamentoEntity {
     private LocalDateTime dataPagamentoConfirmado;
 
     @Column(name = "pagamento_status")
-    private String paymentStatus;
+    private String statusPagamento;
 
     @Column(name = "qr_code")
     private String qrCode;
