@@ -11,8 +11,6 @@ import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @Tag(name = "Pagamento", description = "API para gerenciamento de pagamentos")
 @RestController
 @RequestMapping("api/pagamentos_ms_techchallenge/pagamentos")
