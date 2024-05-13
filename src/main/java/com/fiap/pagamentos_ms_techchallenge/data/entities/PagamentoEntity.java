@@ -19,7 +19,7 @@ public class PagamentoEntity {
     private UUID id;
 
     @Column(name = "pedido_id")
-    private int pedidoId;
+    private String pedidoId;
 
     @Column(name = "total")
     private Float total;
@@ -31,7 +31,7 @@ public class PagamentoEntity {
     private LocalDateTime dataPagamentoConfirmado;
 
     @Column(name = "pagamento_status")
-    private String paymentStatus;
+    private String statusPagamento;
 
     @Column(name = "qr_code")
     private String qrCode;
