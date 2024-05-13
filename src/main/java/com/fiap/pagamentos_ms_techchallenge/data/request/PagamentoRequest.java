@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 public class PagamentoRequest {
 
     @NotNull
-    private Long pedidoId;
+    private String pedidoId;
 
     @NotNull
     private Float total;

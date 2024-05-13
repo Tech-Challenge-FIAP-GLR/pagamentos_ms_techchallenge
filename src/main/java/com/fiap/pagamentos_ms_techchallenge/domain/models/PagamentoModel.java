@@ -13,14 +13,14 @@ import java.util.UUID;
 public class PagamentoModel {
 
     private UUID id;
-    private Long pedidoId;
+    private String pedidoId;
     private Float total;
     private LocalDateTime dataPagamentoGerado;
     private LocalDateTime dataPagamentoConfirmado;
     private String statusPagamento;
     private String qrCode;
 
-    public PagamentoModel(UUID id, Long pedidoId, Float total, LocalDateTime dataPagamentoGerado, LocalDateTime dataPagamentoConfirmado, String statusPagamento, String qrCode) {
+    public PagamentoModel(UUID id, String pedidoId, Float total, LocalDateTime dataPagamentoGerado, LocalDateTime dataPagamentoConfirmado, String statusPagamento, String qrCode) {
         this.id = id;
         this.pedidoId = pedidoId;
         this.total = total == null ? (float) 0.0 : total;
@@ -30,7 +30,7 @@ public class PagamentoModel {
         this.qrCode = qrCode;
     }
 
-    public PagamentoModel(Long pedidoId, Float total) {
+    public PagamentoModel(String pedidoId, Float total) {
         this.pedidoId = pedidoId;
         this.total = total;
     }

@@ -5,8 +5,10 @@ import lombok.Getter;
 @Getter
 public enum PagamentoStatus {
 
-    CREATED(1),
-    PAID(2);
+    CRIADO(1),
+    PAGO(2),
+    CANCELADO(3);
+
 
     final int code;
 

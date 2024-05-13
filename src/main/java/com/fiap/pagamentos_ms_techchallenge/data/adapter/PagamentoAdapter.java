@@ -50,12 +50,11 @@ public class PagamentoAdapter implements PagamentoRepository {
                 ResponseEntity<?> res = restTemplate.exchange(postUrl, HttpMethod.POST, entity, Object.class);
                 String qrCode = ((LinkedHashMap<?, ?>) Objects.requireNonNull(res.getBody())).get("qr_data").toString();
 
-
                 PagamentoEntity pagamentoEntity = new PagamentoEntity();
                 pagamentoEntity.setPedidoId(pagamentoModel.getPedidoId());
                 pagamentoEntity.setTotal(pagamentoModel.getTotal());
                 pagamentoEntity.setDataPagamentoGerado(LocalDateTime.now());
-                pagamentoEntity.setStatusPagamento(PagamentoStatus.CREATED.toString());
+                pagamentoEntity.setStatusPagamento(PagamentoStatus.CRIADO.toString());
                 pagamentoEntity.setQrCode(qrCode);
 
                 var pagamentoRetorno = pagamentoJpaRepository.save(pagamentoEntity);

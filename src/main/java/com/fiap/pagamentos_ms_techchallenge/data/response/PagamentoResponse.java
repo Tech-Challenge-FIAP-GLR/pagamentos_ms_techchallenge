@@ -12,14 +12,14 @@ import java.util.UUID;
 public class PagamentoResponse {
 
     private UUID id;
-    private Long pedidoId;
+    private String pedidoId;
     private Float total;
     private LocalDateTime dataPagamentoGerado;
     private LocalDateTime dataPagamentoConfirmado;
     private String statusPagamento;
     private String qrCode;
 
-    public PagamentoResponse(UUID id, Long pedidoId, Float total, LocalDateTime dataPagamentoGerado, LocalDateTime dataPagamentoConfirmado, String statusPagamento, String qrCode) {
+    public PagamentoResponse(UUID id, String pedidoId, Float total, LocalDateTime dataPagamentoGerado, LocalDateTime dataPagamentoConfirmado, String statusPagamento, String qrCode) {
         this.id = id;
         this.pedidoId = pedidoId;
         this.total = total;
