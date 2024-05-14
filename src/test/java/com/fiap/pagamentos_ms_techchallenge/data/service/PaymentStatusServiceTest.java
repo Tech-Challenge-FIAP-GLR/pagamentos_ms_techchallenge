@@ -45,14 +45,11 @@ public class PaymentStatusServiceTest {
 
     @Test
     public void testAtualizaPagamento() {
-        // Arrange
         when(pagamentoJpaRepository.findAllPagamentosAtivos()).thenReturn(pagamentosAtivos);
         when(pagamentoJpaRepository.save(any(PagamentoEntity.class))).thenAnswer(i -> i.getArguments()[0]);
 
-        // Act
         List<PagamentoEntity> result = paymentStatusService.atualizaPagamento();
 
-        // Assert
         assertEquals(1, result.size());
         PagamentoEntity updatedPagamento = result.get(0);
         assertEquals("123456", updatedPagamento.getPedidoId());
@@ -67,10 +64,8 @@ public class PaymentStatusServiceTest {
 
     @Test
     public void testAtualizaPagamento_Exception() {
-        // Arrange
         when(pagamentoJpaRepository.findAllPagamentosAtivos()).thenThrow(new NoResultException());
 
-        // Act & Assert
         assertThrows(NoResultException.class, () -> paymentStatusService.atualizaPagamento());
         verify(pagamentoJpaRepository, times(1)).findAllPagamentosAtivos();
     }

@@ -4,7 +4,6 @@ import com.fiap.pagamentos_ms_techchallenge.data.repositories.PagamentoJpaReposi
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,7 +20,6 @@ public class PagamentoEntityTest {
 
     @Test
     public void testSaveAndFindById() {
-        // Arrange
         PagamentoEntity pagamentoEntity = new PagamentoEntity();
         pagamentoEntity.setPedidoId("123456");
         pagamentoEntity.setTotal(150.0f);
@@ -29,10 +27,8 @@ public class PagamentoEntityTest {
         pagamentoEntity.setStatusPagamento("CRIADO");
         pagamentoEntity.setQrCode("testQRCode");
 
-        // Act
         PagamentoEntity savedEntity = pagamentoJpaRepository.save(pagamentoEntity);
 
-        // Assert
         assertNotNull(savedEntity);
         assertEquals(pagamentoEntity.getId(), savedEntity.getId());
         assertEquals("123456", savedEntity.getPedidoId());

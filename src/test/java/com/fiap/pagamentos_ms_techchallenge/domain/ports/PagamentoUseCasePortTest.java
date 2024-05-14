@@ -9,7 +9,7 @@ public class PagamentoUseCasePortTest {
 
     @Test
     public void testExecuteSalvar() {
-        PagamentoModel pagamentoModel = new PagamentoModel(); // Crie um objeto PagamentoModel para testar
+        PagamentoModel pagamentoModel = new PagamentoModel();
 
         PagamentoUseCasePort pagamentoUseCasePort = new PagamentoUseCasePort() {
             @Override

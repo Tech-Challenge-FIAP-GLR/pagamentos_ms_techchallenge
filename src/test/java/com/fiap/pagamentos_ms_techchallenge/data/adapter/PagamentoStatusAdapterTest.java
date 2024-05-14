@@ -26,13 +26,9 @@ public class PagamentoStatusAdapterTest {
 
     @Test
     public void testExecute() {
-        // Arrange
+
         when(paymentStatusService.atualizaPagamento()).thenReturn(null);
-
-        // Act
         pagamentoStatusAdapter.execute();
-
-        // Assert
         verify(paymentStatusService, times(1)).atualizaPagamento();
     }
 }
