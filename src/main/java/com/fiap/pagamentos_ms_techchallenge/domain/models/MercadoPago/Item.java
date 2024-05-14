@@ -16,4 +16,8 @@ public class Item {
     private int quantity;
     private String unit_measure;
     private Float total_amount;
+
+    public Item() {
+
+    }
 }

@@ -35,6 +35,10 @@ public class PagamentoModel {
         this.total = total;
     }
 
+    public PagamentoModel() {
+
+    }
+
     public static PagamentoModel fromEntity(PagamentoEntity pedidoEntity) {
         return new PagamentoModel(pedidoEntity.getId(),
                 pedidoEntity.getPedidoId(),

@@ -16,4 +16,8 @@ public class Root {
     private ArrayList<Item> items;
     private String title;
     private Float total_amount;
+
+    public Root() {
+
+    }
 }
