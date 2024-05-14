@@ -29,6 +29,10 @@ public class PagamentoResponse {
         this.qrCode = qrCode;
     }
 
+    public PagamentoResponse() {
+
+    }
+
     public static PagamentoResponse fromDomain(PagamentoModel pagamentoModel) {
         return new PagamentoResponse(pagamentoModel.getId(),
                 pagamentoModel.getPedidoId(),

@@ -9,6 +9,7 @@ import java.util.List;
 
 @Hidden
 public interface PagamentoJpaRepository extends JpaRepository<PagamentoEntity, Long> {
+
     Object findByPedidoId(String pedidoId);
 
 
