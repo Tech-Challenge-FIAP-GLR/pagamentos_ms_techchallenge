@@ -19,10 +19,9 @@ public class PagamentoStatusAdapter {
 
     @Scheduled(cron = "0 * * * * *") // Cron expression for running every minute
     public void execute() {
-        var pagamentos = paymentStatusService.atualizaPagamento();
         String putUrl = "http://pedidos-ms-app:3000/api/pedidos/";
         try {
-
+            var pagamentos = paymentStatusService.atualizaPagamento();
             RestTemplate restTemplate = new RestTemplate();
             HttpHeaders headers = new HttpHeaders();
             headers.set("Authorization", "Bearer TEST-2069151276901001-041814-bd240ae0107c4144fa0910056d20fa10-188752957");
