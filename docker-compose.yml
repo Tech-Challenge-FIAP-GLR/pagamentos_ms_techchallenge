@@ -1,9 +1,9 @@
 version: "3.8"
 
 services:
-  mysqldb:
+  mysqldb-pagamentos:
     image: 'mysql:8.0'
-    container_name: 'container_db'
+    container_name: 'container_db_pagamentos'
     ports:
       - 3306:3306
     environment:
@@ -21,7 +21,7 @@ services:
     ports:
       - 8181:8181
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/techchallenge_pagamentos?createDatabaseIfNotExist=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&enabledTLSProtocols=TLSv1,TLSv1.1,TLSv1.2
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb-pagamentos:3306/techchallenge_pagamentos?createDatabaseIfNotExist=true&characterEncoding=UTF-8&rewriteBatchedStatements=true&enabledTLSProtocols=TLSv1,TLSv1.1,TLSv1.2
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: 170593
     networks:
