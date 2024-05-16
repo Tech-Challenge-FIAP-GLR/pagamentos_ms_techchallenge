@@ -14,10 +14,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
 @Component
 public class PagamentoAdapter implements PagamentoRepository {
@@ -72,5 +69,29 @@ public class PagamentoAdapter implements PagamentoRepository {
                 throw new RuntimeException(e);
             }
     }
+
+    @Override
+    public List<PagamentoEntity> listaPagamentosAtivos() {
+        try{
+            var pedidos = pagamentoJpaRepository.findAllPagamentosAtivos();
+            return pedidos;
+
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public List<PagamentoEntity> listaPagamentosAll() {
+        try{
+            var pedidos = pagamentoJpaRepository.findAll();
+            return pedidos;
+
+        }catch (Exception e){
+            throw new RuntimeException(e);
+        }
+    }
+
+
 }
 
