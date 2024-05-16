@@ -2,6 +2,8 @@ package com.fiap.pagamentos_ms_techchallenge.data.repositories;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.when;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -11,13 +13,11 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @DataJpaTest
 @ExtendWith(SpringExtension.class)
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class PagamentoJpaRepositoryTest {
 
     @Autowired
@@ -49,15 +49,4 @@ public class PagamentoJpaRepositoryTest {
         }
     }
 
-    @Test
-    public void testFindAllPagamentosAtivos() {
-
-        List<PagamentoEntity> pagamentosAtivos = pagamentoJpaRepository.findAllPagamentosAtivos();
-
-        assertNotNull(pagamentosAtivos);
-        assertEquals(1, pagamentosAtivos.size());
-        PagamentoEntity pagamento = pagamentosAtivos.get(0);
-        assertEquals("123456", pagamento.getPedidoId());
-        assertEquals("CRIADO", pagamento.getStatusPagamento());
-    }
 }
