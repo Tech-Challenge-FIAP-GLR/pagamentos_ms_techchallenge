@@ -31,7 +31,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: Install Maven dependencies
         working-directory: .
-        run: mvn install
+        run: mvn clean package
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
