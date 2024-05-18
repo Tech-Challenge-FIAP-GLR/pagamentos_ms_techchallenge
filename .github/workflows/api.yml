@@ -29,11 +29,14 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: Install Maven dependencies
+        working-directory: .
+        run: mvn install
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -X clean package org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Tech-Challenge-FIAP-GLR_pagamentos_ms_techchallenge
+        run: mvn -X org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Tech-Challenge-FIAP-GLR_pagamentos_ms_techchallenge
 
 #  build:
 #    runs-on: ubuntu-latest
