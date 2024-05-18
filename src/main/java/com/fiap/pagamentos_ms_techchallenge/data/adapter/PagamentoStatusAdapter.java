@@ -32,7 +32,7 @@ public class PagamentoStatusAdapter {
                 String putUrlFinal = putUrl+pagamento.getPedidoId();
                 String json = new ObjectMapper().writeValueAsString(body);
                 HttpEntity<String> entity = new HttpEntity<>(json, headers);
-                ResponseEntity<?> res = restTemplate.exchange(putUrlFinal, HttpMethod.PUT, entity, Object.class);
+                restTemplate.exchange(putUrlFinal, HttpMethod.PUT, entity, Object.class);
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
