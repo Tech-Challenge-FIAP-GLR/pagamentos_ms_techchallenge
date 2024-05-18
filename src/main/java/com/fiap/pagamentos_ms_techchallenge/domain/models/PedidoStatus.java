@@ -1,7 +1,11 @@
 package com.fiap.pagamentos_ms_techchallenge.domain.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class PedidoStatus{
 
     public PedidoStatus(String orderStatus) {
@@ -9,9 +13,5 @@ public class PedidoStatus{
     }
 
     @JsonProperty("orderStatus")
-    public String getOrderStatus() {
-        return this.orderStatus; }
-    public void setOrderStatus(String orderStatus) {
-        this.orderStatus = orderStatus; }
     String orderStatus;
 }
