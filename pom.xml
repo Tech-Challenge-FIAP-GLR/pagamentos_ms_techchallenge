@@ -17,6 +17,9 @@
 		<java.version>21</java.version>
 		<sonar.organization>tech-challenge-fiap-glr</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+		<sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/jacoco.exec</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 	<dependencies>
 		<dependency>
