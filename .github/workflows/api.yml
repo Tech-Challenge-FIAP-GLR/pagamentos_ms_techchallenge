@@ -56,9 +56,9 @@ jobs:
 #          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
 #          restore-keys: ${{ runner.os }}-m2
 #
-      - name: Install Maven dependencies
-        working-directory: .
-        run: mvn install
+#      - name: Install Maven dependencies
+#        working-directory: .
+#        run: mvn install
 #
 #      - name: docker login
 #        env:
