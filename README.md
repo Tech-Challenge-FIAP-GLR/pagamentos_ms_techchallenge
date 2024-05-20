@@ -26,7 +26,7 @@ Após a execução dos comandos com sucesso é possível realizar todas as opera
 [pagamentos_ms_techchallenge.postman_collection.json](pagamentos_ms_techchallenge.postman_collection.json)
 
 ## Swagger
-http://localhost:8080/swagger-ui/index.html
+http://localhost:8181/swagger-ui/index.html
 
 ## Banco de dados
 ![banco_pagamentos.png](banco_pagamentos.png)
