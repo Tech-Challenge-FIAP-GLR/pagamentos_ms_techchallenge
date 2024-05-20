@@ -1,6 +1,6 @@
 # Pagamentos Techchallenge
 ## Sobre o projeto
-O projeto é uma API backend de pagamentos, a API conta com os métodos necessários para fazer a criação e consulta de pagamentos PIX QrCode através do MercadoPAgo, a documentação contacom as instruções de uso e mapeamento de endpoints. O projeto conta com arquitetura Clean Architecture, tecnologia Java, utilizando Spring, Hibernate, Maven, JDBC entre outros frameworks, MySQL para banco de dados e Docker para conteinerização e provisionamento da aplicação.
+O projeto é uma API backend de pagamentos, a API conta com os métodos necessários para fazer a criação e consulta de pagamentos PIX QrCode através do MercadoPAgo, a documentação conta com as instruções de uso e mapeamento de endpoints. O projeto conta com arquitetura Clean Architecture + Hexagonal, tecnologia Java, utilizando Spring, Hibernate, Maven, JDBC entre outros frameworks, MySQL para banco de dados e Docker para conteinerização e provisionamento da aplicação.
 
 ## Pré-Requisitos
 1. Java 21
