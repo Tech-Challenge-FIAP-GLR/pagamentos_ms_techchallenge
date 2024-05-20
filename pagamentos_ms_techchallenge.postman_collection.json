@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "338b9869-d389-4743-99e9-17e41442614e",
+		"name": "pagamentos_ms_techchallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29078086"
+	},
+	"item": [
+		{
+			"name": "Cria Pagamento (QrCode)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pedidoId\":\"zxczx\",\r\n    \"total\": 670.50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8181/api/pagamentos_ms_techchallenge/pagamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"pagamentos_ms_techchallenge",
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pagamentos TODOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/pagamentos_ms_techchallenge/pagamentos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"pagamentos_ms_techchallenge",
+						"pagamentos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pagamentos Status CRIADO",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8181/api/pagamentos_ms_techchallenge/pagamentos/status/CRIADO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"api",
+						"pagamentos_ms_techchallenge",
+						"pagamentos",
+						"status",
+						"CRIADO"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
