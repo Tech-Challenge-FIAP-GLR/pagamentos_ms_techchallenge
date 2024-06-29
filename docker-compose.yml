@@ -1,6 +1,14 @@
 version: "3.8"
 
 services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672" # Management UI
+      - "5672:5672"   # Default RabbitMQ Port
+    networks:
+      - rede
+
   mysqldb-pagamentos:
     image: 'mysql:8.0'
     container_name: 'container_db_pagamentos'
@@ -30,5 +38,6 @@ services:
       - mysqldb-pagamentos
     volumes:
       - .m2:/root/.m2
+
 networks:
   rede:
