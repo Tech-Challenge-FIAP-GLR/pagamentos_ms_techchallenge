@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 public class PedidoStatus{
@@ -29,6 +27,7 @@ public class PedidoStatus{
     @JsonProperty("orderStatus")
     String orderStatus;
 
-    public PedidoStatus(String pago) {
+    public PedidoStatus(String orderStatus) {
+        this.orderStatus = orderStatus;
     }
 }
